@@ -27,6 +27,7 @@ l'utilisateur utilise un thème sombre sur son système. */
     text-decoration: underline;
 }
 
+
 @font-face {
     font-family: 'JGS5';
     src: url('../fonts/FT88-School.woff2') format('woff2'),
