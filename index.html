@@ -30,31 +30,32 @@
 
       
     <div class="ascii-container">
-        <pre class="ascii-art">
-                  ▄▄██▀▀▀▀█▄▄
-                ▄████▀     ██
-                █████       ██      ▄▄██▄
-                ▀███▄      ▀▀     ▄█▀█████
-                  ▀██▄  ██        █   ▀▀▀
-              ▄▄▄████▀▀▀▀        █
-           ███████▀▀            ▄█
-          ██████▀               ██
-         ██████    ▄▄▄██▄       ██
-        ██████   ▄████████     ████▄▄▄██▄
-        ██████   ██▀▀▀████     ████▀▀█████
-        ██████   ██   ▀▀▀     ████   ██████
-         █████   ██           ████   ██████
-         ████    ██▄         ████    ██████
-         ████▄    ▀██▄▄    ▄███▀    ▄█████
-          ▀███▄      ▀█████▀▀▀     ▄████▀              
-            ▀██▄▄                ▄▄███▀
-              ▀▀█▄▄            ▄████▀
-                  ▀▀▀▀▀█▄▄▄▄███▀▀▀
-        </pre>
+        <div class="ascii-art" id="ascii-art">
+              ▄▄██▀▀▀▀█▄▄
+            ▄████▀     ██
+            █████       ██      ▄▄██▄
+            ▀███▄      ▀▀     ▄█▀█████
+              ▀██▄  ██        █   ▀▀▀
+          ▄▄▄████▀▀▀▀        █
+       ███████▀▀            ▄█
+      ██████▀               ██
+     ██████    ▄▄▄██▄       ██
+    ██████   ▄████████     ████▄▄▄██▄
+    ██████   ██▀▀▀████     ████▀▀█████
+    ██████   ██   ▀▀▀     ████   ██████
+     █████   ██           ████   ██████
+     ████    ██▄         ████    ██████
+     ████▄    ▀██▄▄    ▄███▀    ▄█████
+      ▀███▄      ▀█████▀▀▀     ▄████▀            
+        ▀██▄▄                ▄▄███▀
+          ▀▀█▄▄            ▄████▀
+              ▀▀▀▀▀█▄▄▄▄███▀▀▀
         </div>
+      </div>
+      
       
 
-        <script src="./scripts.js"></script>
+        <script src="./cursor.js"></script>
 
     <footer>
         <div class="footer-left">
@@ -65,7 +66,28 @@
         </div>
     </footer>
 
-
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.getElementById("ascii-art");
+          const lines = container.innerText.split("\n");
+      
+          container.innerHTML = ""; // Clear existing text
+      
+          lines.forEach(line => {
+            const lineDiv = document.createElement("div");
+            [...line].forEach(char => {
+              const span = document.createElement("span");
+              span.textContent = char;
+              if (char !== " ") {
+                span.classList.add("ascii-char");
+              }
+              lineDiv.appendChild(span);
+            });
+            container.appendChild(lineDiv);
+          });
+        });
+      </script>
+      
 </body>
 
 </html>
