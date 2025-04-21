@@ -1,0 +1,146 @@
+/* GENERAL */
+
+/* A TESTER : Cela configure automatiquement le Dark Mode si 
+l'utilisateur utilise un thème sombre sur son système. */
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #5E5E5E;
+        --text-color: #DBD6CE;
+    }
+} */
+
+
+:root {
+    --background-color: #DBD6CE;
+    --text-color: #5E5E5E;
+}
+
+/* Thème Dark */
+[data-theme="dark"] {
+    --background-color: #5E5E5E;
+    --text-color: #DBD6CE;
+}
+
+[data-theme="dark"] #dark-mode-link,
+[data-theme="light"] #light-mode-link {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'JGS5';
+    src: url('../fonts/FT88-School.woff2') format('woff2'),
+        url('../fonts/FT88-School.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FT88-School', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+/* Style pour les liens visités */
+a:visited {
+    color: var(--text-color);
+    /* Même couleur que le lien normal */
+}
+
+/* Style pour les liens actifs */
+a:active {
+    color: var(--text-color);
+}
+
+/* HEADER */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Deux colonnes égales */
+    align-items: center;
+    padding: 20px;
+    font-size: 2.5vh;
+}
+
+.left,
+.right {
+    display: flex;
+    /* Pour aligner les éléments horizontalement */
+}
+
+.left {
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.right {
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.left div,
+.right div {
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* Fixé à un emplacement spécifique */
+    bottom: 0;
+    width: 100vw;
+    /* S'étend sur toute la largeur */
+    font-size: 2.5vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-right {
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.footer-left div,
+.footer-right div {
+    cursor: pointer;
+    /* Ajoute un style interactif */
+}
+
+/* PSEUDO MARQUEE */
+
+.text-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px; /* Taille du texte */
+    overflow: hidden;
+  }
+  
+  /* Texte animé */
+  #display-text {
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden;
+  }
+  
+
