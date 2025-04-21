@@ -29,9 +29,9 @@ l'utilisateur utilise un thème sombre sur son système. */
 
 
 @font-face {
-    font-family: 'JGS5';
-    src: url('../fonts/FT88-School.woff2') format('woff2'),
-        url('../fonts/FT88-School.woff') format('woff');
+    font-family: 'FT88-School';
+    src: url('./fonts/FT88-School.woff2') format('woff2'),
+        url('./fonts/FT88-School.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
