@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produit 1 - Egregore</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+</head>
+
+<body>
+  <header>
+    <div class="left">
+      <a href="../index.html">Home</a>
+      <a href="../shop.html">Shop</a>
+    </div>
+    <div class="right">
+      <a href="#" id="light-mode-link">Light</a> / 
+      <a href="#" id="dark-mode-link">Dark</a>
+    </div>
+  </header>
+
+  <main class="product-detail">
+    <img src="../img/prod_01_img_01.jpeg" alt="Produit 1" style="width: 300px;" />
+    <h1>Produit 1</h1>
+    <p>Description détaillée du produit 1 ici...</p>
+    <p>25.00 €</p>
+
+    <button
+      class="snipcart-add-item"
+      data-item-id="produit-1"
+      data-item-price="25.00"
+      data-item-url="/produits/prod-01.html"
+      data-item-description="Description du produit 1"
+      data-item-image="../img/prod_01_img_01.jpeg"
+      data-item-name="Produit 1"
+    >
+      ˚˖⋆🛒 Acheter ce produit ✧˚.
+    </button>
+  </main>
+
+  <script src="../scripts.js"></script>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="TA_CLE_API_SNIPCART"></div>
+</body>
+</html>
