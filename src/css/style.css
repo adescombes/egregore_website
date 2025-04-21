@@ -144,3 +144,47 @@ footer {
   }
   
 
+/* $HOP */
+
+.product-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+    grid-template-columns: repeat(var(--columns-count, 4), minmax(0, 1fr));
+    /*grid-gap: var(--border-width); pour l'espacement entre les éléments de grille -> définir --border-width*/
+    box-shadow: 0 0 0 var(--border-width) var(--color--font-primary);
+    background: var(--color--background-main);
+    align-items: flex-start;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .product-card img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .product-card img.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .product-card:hover img.hover-image {
+    opacity: 1;
+  }
+
+  .product-info {
+    text-align: center;
+    margin-top: 10px;
+  }
