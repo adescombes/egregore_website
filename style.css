@@ -139,11 +139,55 @@ footer {
   }
   
   /* Texte animé */
+
   #display-text {
     white-space: nowrap; /* Empêche le retour à la ligne */
     overflow: hidden;
+
   }
-  
+
+/* LANDING PAGE */
+/*
+.ascii-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90%;
+}
+
+.ascii-art {
+  white-space: pre;
+  font-size: 40px;
+  line-height: 1;
+  text-align: left;
+  padding: 1rem;
+  max-width: 100vmin;
+  max-height: 100vmin;
+  /*overflow: auto;
+}*/
+
+.ascii-art {
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.1;
+  white-space: pre;
+  text-align: center;
+}
+
+.ascii-char {
+  background-color: #aaa; /* gris initial */
+  color: white;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  width: 1ch;
+}
+
+.ascii-char:hover {
+  background-color: white;
+}
+
+
 
 /* $HOP */
 

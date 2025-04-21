@@ -55,3 +55,28 @@ function typeText() {
 
 typeText();
 
+// LANDING PAGE
+
+document.addEventListener("DOMContentLoaded", () => {
+  const asciiContainer = document.getElementById("ascii-art");
+  const lines = asciiContainer.innerText.split("\n");
+
+  asciiContainer.innerHTML = ""; // on efface le contenu brut
+
+  lines.forEach(line => {
+    const lineDiv = document.createElement("div");
+
+    [...line].forEach(char => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? " " : char;
+      if (char !== " ") {
+        span.classList.add("ascii-char");
+      }
+      lineDiv.appendChild(span);
+    });
+
+    asciiContainer.appendChild(lineDiv);
+  });
+});
+
+
